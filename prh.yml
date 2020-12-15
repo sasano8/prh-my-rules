@@ -1,0 +1,18 @@
+imports:
+  - prh-override.yml
+
+version: 1
+rules:
+  - expected: アンパック記法
+    pattern:  /(アンパック表記|展開表記)/
+    prh: アンパック記法の間違いと思われます。
+
+  - expected: Python
+    pattern:  python
+
+  - expected: 性能
+    pattern:  パフォーマンス
+
+  - expected: 者
+    pattern:  者の方
+    prh: 冗長な書き方です

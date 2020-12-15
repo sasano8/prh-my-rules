@@ -1,0 +1,12 @@
+imports:
+  - ./prh-rules/media/techbooster.yml
+  - ./prh-rules/media/WEB+DB_PRESS.yml
+
+version: 1
+rules:
+  # ================================
+  # WEB+DB_PRESS.yml
+  # ================================
+  # 基づいて　に誤ヒットしてしまう
+  - pattern: /基([^数準盤板底礎本づ])/
+    expected: もと$1

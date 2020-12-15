@@ -1,0 +1,24 @@
+{
+  "name": "prh-my-rules",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sasano8/prh-my-rules.git"
+  },
+  "author": "sasano8",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sasano8/prh-my-rules/issues"
+  },
+  "homepage": "https://github.com/sasano8/prh-my-rules#readme",
+  "dependencies": {
+    "prh": "^5.4.4"
+  },
+  "devDependencies": {
+    "glob-expand": "^0.2.1"
+  }
+}
