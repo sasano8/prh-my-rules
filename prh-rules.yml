@@ -1,5 +1,5 @@
 imports:
-  - prh-override.yml
+  - prh-rules-override.yml
 
 version: 1
 rules:
