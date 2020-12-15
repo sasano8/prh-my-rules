@@ -1,6 +1,22 @@
 imports:
-  - ./prh-rules/media/techbooster.yml
-  - ./prh-rules/media/WEB+DB_PRESS.yml
+  - path: ./prh-rules/media/techbooster.yml
+    ignoreRules:
+      - pattern:  /(一|ひと)通り/
+        expected: ひととおり
+      - pattern:  通り
+        expected: とおり
+
+  - path: ./prh-rules/media/WEB+DB_PRESS.yml
+    ignoreRules:
+      # 尤も => もっとも で無限ループするため無視
+      - pattern: もっとも
+        expected: 最も
+      - pattern:
+        - ひととおり
+        - ひと通り
+        - 一とおり
+        expected: 一通り
+
 
 version: 1
 rules:
@@ -10,3 +26,13 @@ rules:
   # 基づいて　に誤ヒットしてしまう
   - pattern: /基([^数準盤板底礎本づ])/
     expected: もと$1
+  - pattern: /([^排人])他([^ァ-ヶ社者人方の])/
+    expected: $1ほか$2
+  - pattern: /(一とおり|ひと通り)/
+    expected: ひととおり
+    prh: 全体を意味する場合は「ひととおり」、組み合わせを意味する場合は「１通り」としてください
+  # # textlint-rule-preset-ja-technical-writingで利用されている、https://github.com/textlint-ja/textlint-rule-preset-JTF-style（算用数字の判定）は通に対して実装されていない模様
+  - pattern: /([一二三四五六七八九十]+)通/
+    expected: ○通
+    prh: 手動で算用数字に変換してください
+
