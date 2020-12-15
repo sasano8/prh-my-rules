@@ -3,7 +3,7 @@ textlintのルール集です。スターが多いルールをベースに、独
 
 
 # 構成
-- prh-rules: 外部リポジトリのルールです。ルールは、これがベースとなります。
+- prh-rules: 外部リポジトリのルールです。これらのルールがベースとなります。
 - prh-rules-override.yml: prh-rulesに変更を加えたい場合、ルールを追記する。※同じキーを定義すると、上書きされるように見えるが内部実装がどうなっているかは知らない。
 - prh-rules.yml: 外部リポジトリのルールと衝突しない独自ルールを記述する。
 
@@ -18,7 +18,7 @@ git submodule add https://github.com/prh/rules.git prh-rules
 ```
 
 ### ２.　textlintrcの設定を行う
-.textlintrcを作成し、サブモジュールのルールを追加する。
+.textlintrcを作成し、サブモジュールのルール（`prh -> rulePaths`）を追加する。
 
 ```
 touch .textlintrc
@@ -52,6 +52,8 @@ touch .textlintrc
   }
 }
 ```
+
+textlintrcフォルダに、雛形が置いてあるので合わせて参考にしてください。
 
 ### ３.　commitする
 

@@ -1,0 +1,26 @@
+{
+  "prh": {
+    "rulePaths": ["./prh-my-rules/prh-rules.yml"]
+  },
+  "plugins": {
+    "@textlint/markdown": {
+        "extensions": [".md", ".txt"]
+    }
+  },
+  "filters": {},
+  "rules": {
+    "preset-ja-spacing": true,
+    "spellcheck-tech-word": true,
+    "preset-ja-technical-writing": true,
+    "ja-technical-writing/max-kanji-continuous-len": {
+        max: 8,
+        allow: ["倍精度浮動小数点数"]
+    },
+    "ja-technical-writing/max-ten": {
+        max: 4
+    },
+    "ja-technical-writing/max-comma": {
+        max: 4
+    }
+  }
+}

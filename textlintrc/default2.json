@@ -1,0 +1,51 @@
+{
+    "rules": {
+        // Japanese
+        "prh": {
+            "rulePaths": [
+                "~/path/to/dict.yml"
+            ]
+        },
+        "preset-jtf-style": {
+            "2.2.2.算用数字と漢数字の使い分け": false,
+            "3.1.1.全角文字と半角文字の間": false,
+            "4.2.7.コロン(：)": false,
+            "4.3.6.中かっこ{ }": false,
+            "4.3.7.山かっこ<>": false
+        },
+        "no-mix-dearu-desumasu": {
+            "preferInHeader": "",
+            "preferInBody": "ですます",
+            "preferInList": "である",
+            "strict": true
+        },
+        "max-appearence-count-of-words": {
+            "limit" : 3
+        },
+        "max-kanji-continuous-len": {
+            "max" : 6
+        },
+        "max-ten": {
+            "max" : 4
+        },
+        "sentence-length": {
+            "max" : 150
+        },
+        "no-double-negative-ja": true,
+        "no-doubled-conjunction": true,
+        "no-doubled-conjunctive-particle-ga": true,
+        "no-doubled-joshi": true,
+        "no-dropping-the-ra": true
+        //// English
+        //"alex": {
+        //    "allow": []
+        //},
+        //"common-misspellings": true,
+        //"ginger": true,
+        //"ng-word": true,
+        //"no-dead-link": true,
+        //"spellchecker": true,
+        //"unexpanded-acronym": true,
+        //"write-good": true
+    }
+}
