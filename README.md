@@ -18,6 +18,13 @@ git submodule add https://github.com/prh/rules.git prh-rules
 ```
 
 ### ２.　textlintrcの設定を行う
+
+
+# TODO: 試してみる
+package.jsonのtextlintフィールドにパスを指定してみる
+
+
+
 .textlintrcを作成し、サブモジュールのルール（`prh -> rulePaths`）を追加する。
 
 ```
