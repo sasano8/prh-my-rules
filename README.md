@@ -14,7 +14,11 @@ textlintのルール集です。スターが多いルールをベースに、独
 ### １.　サブモジュールとして追加する
 
 ``` shell
+# サブモジュール（リポジトリ）を追加する
 git submodule add https://github.com/sasano8/prh-my-rules prh-my-rules
+
+# サブモジュールおよびにネストしたサブモジュールを最新にする
+git submodule update --init --recursive
 ```
 
 ### ２.　textlintrcの設定を行う
