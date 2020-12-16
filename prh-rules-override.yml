@@ -35,4 +35,5 @@ rules:
   - pattern: /([一二三四五六七八九十]+)通/
     expected: ○通
     prh: 手動で算用数字に変換してください
-
+  - pattern: /([^`])(None|null)([^`])/
+    expected: "$1`$2`$3"
