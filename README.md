@@ -4,14 +4,17 @@ textlintのルール集です。スターが多いルールをベースに、独
 
 # 構成
 - prh-rules: 外部リポジトリのルールです。これらのルールがベースとなります。
-- prh-rules-override.yml: prh-rulesに変更を加えたい場合、ルールを追記する。※同じキーを定義すると、上書きされるように見えるが内部実装がどうなっているかは知らない。
+- prh-rules-override.yml: prh-rulesに変更を加えたい場合、ルールを追記する。※同じキーを定義すると、上書きされるように見えるが内部実装は不明。
 - prh-rules.yml: 外部リポジトリのルールと衝突しない独自ルールを記述する。
+
+# 参考サイト
+- [textlint-ja](https://github.com/textlint-ja)
 
 # 導入手順
 
 ## 新規リポジトリでルールを利用する
 
-### １.　サブモジュールとして追加する
+### 1.　サブモジュールとして追加する
 
 ``` shell
 # サブモジュール（リポジトリ）を追加する
@@ -21,11 +24,11 @@ git submodule add https://github.com/sasano8/prh-my-rules prh-my-rules
 git submodule update --init --recursive
 ```
 
-### ２.　textlintrcの設定を行う
+### 2.　textlintrcの設定を行う
 
 
 # TODO: 試してみる
-package.jsonのtextlintフィールドにパスを指定してみる
+package.jsonのtextlintフィールドにパスを指定してみる。
 
 
 
@@ -64,9 +67,9 @@ touch .textlintrc
 }
 ```
 
-textlintrcフォルダに、雛形が置いてあるので合わせて参考にしてください。
+textlintrcフォルダに、ひな型が置いてあるので合わせて参考にしてください。
 
-### ３.　commitする
+### 3.　commitする
 
 ```
 git commit -m"add submodule prh-rules"
@@ -85,3 +88,7 @@ clone時に、`--recursive`を忘れてしまった場合は、次のように�
 git submodule update --recursive
 ```
 
+
+# 基礎教養
+
+## ら抜き言葉

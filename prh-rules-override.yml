@@ -37,3 +37,10 @@ rules:
     prh: 手動で算用数字に変換してください
   - pattern: /([^`])(None|null)([^`])/
     expected: "$1`$2`$3"
+  # TODO: 箇条書きの中でのみ適用したい
+#   - pattern: されました
+#     expected: された
+#   - pattern: なりました
+#     expected: なった
+
+  # TODO: O（n）の括弧は半角にしたい
