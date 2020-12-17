@@ -16,3 +16,9 @@ rules:
   - expected: 者
     pattern:  者の方
     prh: 冗長な書き方です
+
+  - expected: インスタンスを生成
+    pattern:
+      - インスタンスを作成
+      - オブジェクトを作成
+      - オブジェクトを生成
