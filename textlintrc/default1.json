@@ -1,26 +1,34 @@
 {
-  "prh": {
-    "rulePaths": ["./prh-my-rules/prh-rules.yml"]
-  },
   "plugins": {
     "@textlint/markdown": {
-        "extensions": [".md", ".txt"]
+      "extensions": [".md", ".txt"]
     }
   },
   "filters": {},
   "rules": {
+    "preset-jtf-style": true,
     "preset-ja-spacing": true,
     "spellcheck-tech-word": true,
     "preset-ja-technical-writing": true,
     "ja-technical-writing/max-kanji-continuous-len": {
-        max: 8,
-        allow: ["倍精度浮動小数点数"]
+        "max": 8,
+        "allow": ["倍精度浮動小数点数"]
     },
     "ja-technical-writing/max-ten": {
-        max: 4
+        "max": 4
     },
     "ja-technical-writing/max-comma": {
-        max: 4
+        "max": 4
+    },
+    // である（常体）orですます（敬体）を指定。空白で多く使われている表記を自動的に優先。
+    "ja-technical-writing/no-mix-dearu-desumasu": {
+        "preferInHeader": "ですます",
+        "preferInBody": "ですます",
+        "preferInList": "である",
+        "strict": true  //文中のチェックを厳しくする
+    },
+    "prh": {
+        "rulePaths": ["./prh-my-rules/prh-rules.yml"]
     }
   }
 }
