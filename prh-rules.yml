@@ -22,3 +22,7 @@ rules:
       - インスタンスを作成
       - オブジェクトを作成
       - オブジェクトを生成
+  - expected: とも呼ぶ
+    pattern: ともいう
+  - expected: 参考にしてください
+    pattern: 参考ください
